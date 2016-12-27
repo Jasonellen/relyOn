@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width:device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="mobiscroll.custom-2.17.0.min.css">
+	<style>
+		.mbsc-mobiscroll .dwb0{
+			color: red;
+		}
+	</style>
+
+</head>
+<body>
+	<input id="demo" placeholder="Please Select..." />
+	<button id="show">show</button>
+	<button id="clear">clear</button>
+	<script src='jquery.min.js'></script>
+	<script src='mobiscroll.custom-2.17.0.min.js'></script>
+	<script>
+		$(function () {
+		    var now = new Date(),
+		        minDate = new Date(now.getFullYear() - 10, now.getMonth(), now.getDate()),
+		        maxDate = new Date(now.getFullYear() + 10, now.getMonth(), now.getDate());
+
+		    $('#demo').mobiscroll().datetime({
+		        theme: 'mobiscroll',
+		        lang: 'zh',
+		        display: 'bottom',
+		        min: minDate,
+		        max: maxDate,
+		        stepMinute: 1 ,
+		        
+		        dateFormat: 'yy-mm-dd', //日期格式
+		        // timeFormat: 'HH:ii', //事件格式 大写24H 小写12H
+       			// timeWheels: 'HHii'
+       			//dateOrder: 'ddyymm', //面板中日期排列格式
+
+		    });
+
+		    $('#show').click(function () {  
+		        $('#demo').mobiscroll('show');
+		        return false;  
+		    }); 
+
+		    $('#clear').click(function () {  
+		        $('#demo').mobiscroll('clear');  
+		        return false;  
+		    });
+		});
+	</script>
+</body>
+</html>
