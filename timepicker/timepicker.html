@@ -59,6 +59,123 @@
 		        return false;  
 		    });
 		});
+		/*
+			theme: 'android-ics light', //皮肤样式
+			display: 'modal', //显示方式
+			mode:'scroller',
+			dateFormat: 'yy-mm-dd', // 日期格式
+			setText: '确定', //确认按钮名称
+			cancelText: '取消',//取消按钮
+			dateOrder: 'yymmdd', //面板中日期排列格式
+			headerText: function (valueText) { array = valueText.split('-'); return array[0] + "年" + array[1] + "月"+array[2]+"日"; }, //自定义弹出框头部格式
+			rows:5,//滚动区域内的行数 
+			
+			events
+			这里我列举一下treelist包含的事件并简单的描述一下。
+			（1）onBeforeClose(valueText, btn, inst)
+			描述：在list关闭之前执行，如果返回false则不会关闭list。
+			demo：
+			$('#mobiscroll').mobiscroll().list({
+			    onBeforeClose: function (valueText, btn, inst) {
+			    }
+			});
+			 
+			（2）onBeforeShow(inst)
+			描述：在list显示之前执行的事件，一样如果返回false则list不会显示。
+			demo：
+			$('#mobiscroll').mobiscroll().list({
+			    onBeforeShow: function (inst) {
+			    }
+			});
+			 
+			（3）onCancel(valueText, inst)
+			描述：当取消按钮被点击的时候执行的事件。
+			demo：
+			$('#mobiscroll').mobiscroll().list({
+			    onCancel: function (valueText, inst) {
+			    }
+			});
+			 
+			（4）onChange(valueText, inst)
+			描述：当value值改变的时候执行
+			demo：
+			$('#mobiscroll').mobiscroll().list({
+			    onChange: function (valueText, inst) {
+			    }
+			});
+			 
+			（5）onClosed(valueText, inst)
+			描述：当list关闭的时候执行的回调函数
+			demo：
+			$('#mobiscroll').mobiscroll().list({
+			    onClosed: function (valueText, inst) {
+			    }
+			});
+			 
+			（6）onDestroy(inst)
+			描述：当miboscroll实例被destoroy的时候回调
+			demo：
+			$('#mobiscroll').mobiscroll().list({
+			    onDestroy: function (inst) {
+			    }
+			});
+			 
+			（7）onHide(inst)
+			描述：list 关闭的动画执行完毕后回调
+			demo：
+			$('#mobiscroll').mobiscroll().list({
+			    onHide: function (inst) {
+			    }
+			});
+			 
+			（8）onInit(inst)
+			描述：mobiscroll实例初始化完成后执行
+			demo：
+			$('#mobiscroll').mobiscroll().list({
+			    onInit: function (inst) {
+			    }
+			});
+			 
+			（9）onMarkupReady(html, inst)
+			描述：list的html代码已经生成，但是还没有显示到页面中的时候，这个时候可以进行标签的修改。例如添加自定义元素。它会在定位完成前执行。
+			demo：
+			$('#mobiscroll').mobiscroll().list({
+			    onMarkupReady: function (html, inst) {
+			    }
+			});
+			 
+			（10）onPosition(html, windowWidth, windowHeight, inst)
+			描述：list定位完成后调用（包括初始化完成以及大小/方向调整之后）
+			demo：
+			$('#mobiscroll').mobiscroll().list({
+			    onPosition: function (html, windowWidth, windowHeight, inst) {
+			    }
+			});
+			 
+			（11）onSelect(valueText, inst)
+			描述：当value被设置的时候，简单理解就是选择好了原始点击确定之后
+			demo：
+			$('#mobiscroll').mobiscroll().list({
+			    onSelect: function (valueText, inst) {
+			    }
+			});
+			（12）onShow(html, valueText, inst)
+			描述：当list出现的时候
+			demo：
+			$('#mobiscroll').mobiscroll().list({
+			    onShow: function (html, valueText, inst) {
+			    }
+			});
+			 
+			（13）onValueTap(item, inst)
+			描述：当用户点击list上面的值是调用
+			demo：
+			$('#mobiscroll').mobiscroll().list({
+			    onValueTap: function (item, inst) {
+			    }
+			});
+
+		*/
 	</script>
 </body>
 </html>
